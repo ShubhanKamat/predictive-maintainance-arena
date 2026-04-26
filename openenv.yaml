@@ -1,0 +1,25 @@
+name: pred_maint_arena
+version: "1.0.0"
+description: >
+  Predictive Maintenance Arena: A self-improving OpenEnv environment where AI
+  agents manage a factory floor of 5 interconnected industrial machines. Agents
+  must interpret noisy sensor data, predict failures, schedule maintenance, and
+  prevent cascading shutdowns. Adaptive difficulty escalates as the agent improves.
+
+author: "Shubhan Kamat"
+license: "BSD-3-Clause"
+tags:
+  - openenv
+  - rl
+  - predictive-maintenance
+  - industrial-ml
+  - world-modeling
+  - self-improvement
+
+environment:
+  entrypoint: server/app.py
+  port: 7860
+  python_version: "3.11"
+
+  action_model: models.MaintenanceAction
+  observation_model: models.MaintenanceObservation
